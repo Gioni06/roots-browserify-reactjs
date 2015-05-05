@@ -1,0 +1,9 @@
+extends layout
+block content
+  div
+    ul#list
+      each item in dataB.items
+        li(draggable='true', onDragStart='OnDragStart(event,$(this))' data-position!=item.position, ondragover="allowDrop(event)", onDrop='drop(event)')=item.title
+  div#dropzone(onDrop='drop(event)')      
+      
+  
